@@ -106,9 +106,11 @@ jobs:
         category: "/language:${{matrix.language}}"
         upload: never
 
-    - name: Print CodeQL Analysis Results
-      run: |
-        cat ../results/cpp.sarif
+    - name: Archive CodeQL results
+      uses: actions/upload-artifact@v3
+      with:
+        name: codeql-report
+        path: ../results/cpp.sarif
 
   #analyze-demos-cpp:
   #  name: Analyze
