@@ -105,12 +105,13 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
         upload: never
+        output: ${{ runner.temp }}/results
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
       with:
-        name: codeql-report
-        path: ../results/cpp.sarif
+        name: codeql-results
+        path: ${{ runner.temp }}/results
 
   #analyze-demos-cpp:
   #  name: Analyze
