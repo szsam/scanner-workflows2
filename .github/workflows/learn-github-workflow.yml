@@ -75,9 +75,10 @@ jobs:
         category: "/language:${{matrix.language}}"
         upload: never
         output: ${{ runner.temp }}/results
+        add-snippets: true
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
       with:
         name: codeql-results
-        path: ${{ runner.temp }}/results
+        path: ${{ github.workspace }} ${{ runner.temp }}/results
