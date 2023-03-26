@@ -81,4 +81,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: codeql-results
-        path: ${{ github.workspace }} ${{ runner.temp }}/results
+        path: |
+          ${{ github.workspace }}
+          ${{ runner.temp }}/results
