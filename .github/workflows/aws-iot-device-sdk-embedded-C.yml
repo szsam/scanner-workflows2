@@ -113,7 +113,6 @@ jobs:
       with:
         name: codeql-results
         path: |
-          ${{ github.workspace }}
           ${{ runner.temp }}/results
 
   #analyze-demos-cpp:
