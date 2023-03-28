@@ -9,19 +9,17 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL"
+name: "CodeQL Autobuild"
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "main" ]
-  schedule:
-    - cron: '20 7 * * 6'
+  workflow_dispatch:
+    inputs:
+      repository:
+        required: true
+        type: string
 
 jobs:
-  analyze-demos:
+  analyze:
     name: Analyze
     runs-on: ubuntu-20.04
     permissions:
@@ -42,8 +40,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        repository: szsam/learn-github-workflow
-        #submodules: recursive
+        repository: ${{ inputs.repository }}
+        submodules: recursive
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
