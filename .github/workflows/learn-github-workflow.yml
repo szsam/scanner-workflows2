@@ -9,7 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL Autobuild"
+name: "CodeQL"
 
 on:
   workflow_dispatch:
@@ -19,9 +19,14 @@ on:
         required: true
         type: string
       build_script:
-        description: 'Build script (Autobuild if omitted)'
+        description: 'Build script. Default: Autobuild.'
         required: false
         type: string
+      ref:
+        description: 'The branch, tag or SHA to checkout.'
+        required: false
+        type: string
+
 
 jobs:
   analyze:
@@ -42,11 +47,17 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Checkout repository
+    - name: Checkout scanner repository
+      uses: actions/checkout@v3
+      with:
+        path: scanner
+
+    - name: Checkout repository under test
       uses: actions/checkout@v3
       with:
         repository: ${{ inputs.repository }}
         submodules: recursive
+        path: rut
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -74,7 +85,8 @@ jobs:
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
     - name: Manual build
       if: ${{ inputs.build_script != '' }}
-      run: . ${{ inputs.build_script }}
+      working-directory: rut
+      run: . ${{ github.workspace }}/scanner/${{ inputs.build_script }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
