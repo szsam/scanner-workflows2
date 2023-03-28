@@ -15,7 +15,12 @@ on:
   workflow_dispatch:
     inputs:
       repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
         required: true
+        type: string
+      build_script:
+        description: 'Build script (Autobuild if omitted)'
+        required: false
         type: string
 
 jobs:
@@ -59,6 +64,7 @@ jobs:
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
+      if: ${{ inputs.build_script == '' }}
       uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
@@ -66,6 +72,9 @@ jobs:
 
     #   If the Autobuild fails above, remove it and uncomment the following three lines.
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
+    - name: Manual build
+      if: ${{ inputs.build_script != '' }}
+      run: . ${{ inputs.build_script }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
