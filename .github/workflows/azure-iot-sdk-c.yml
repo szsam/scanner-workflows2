@@ -11,7 +11,7 @@ on:
 
 jobs:
   call_codeql_workflow:
-    uses: szsam/scanner-workflows/.github/workflows/codeql.yml
+    uses: ./.github/workflows/codeql.yml
     with:
       repository: Azure/azure-iot-sdk-c
       build_script: azure-iot-sdk-c.sh
