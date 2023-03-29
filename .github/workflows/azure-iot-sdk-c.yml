@@ -13,6 +13,8 @@ jobs:
   call_codeql_workflow:
     permissions:
       actions: read
+      contents: read
+      security-events: write
     uses: ./.github/workflows/codeql.yml
     with:
       repository: Azure/azure-iot-sdk-c
