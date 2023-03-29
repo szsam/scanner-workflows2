@@ -8,6 +8,24 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '20 7 * * 6'
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: false
+        type: string
+        default: Azure/azure-iot-sdk-c
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+      build_script:
+        description: >
+          Build script (relative path from .github/build-scripts/).
+          Use Autobuild if left blank.
+        required: false
+        type: string
+        default: azure-iot-sdk-c.sh
 
 jobs:
   call_codeql_workflow:
@@ -17,5 +35,6 @@ jobs:
       security-events: write
     uses: ./.github/workflows/codeql.yml
     with:
-      repository: Azure/azure-iot-sdk-c
-      build_script: azure-iot-sdk-c.sh
+      repository: ${{ inputs.repository }}
+      ref: ${{ inputs.ref }}
+      build_script: ${{ inputs.build_script }}
