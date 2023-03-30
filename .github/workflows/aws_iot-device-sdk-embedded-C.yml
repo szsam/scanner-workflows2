@@ -1,20 +1,15 @@
-name: "CodeQL: Azure/azure-iot-sdk-c"
+name: "CodeQL: aws/aws-iot-device-sdk-embedded-C"
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "main" ]
   schedule:
-    - cron: '20 7 * * 6'
+    - cron: '48 4 * * *'
   workflow_dispatch:
     inputs:
       repository:
         description: 'Repository to run CodeQL on. Format: owner/repo.'
         required: true
         type: string
-        default: Azure/azure-iot-sdk-c
+        default: aws/aws-iot-device-sdk-embedded-C
       ref:
         description: 'The branch, tag or SHA to checkout. Default: default branch.'
         required: false
@@ -28,6 +23,6 @@ jobs:
       security-events: write
     uses: ./.github/workflows/codeql.yml
     with:
-      repository: ${{ inputs.repository || 'Azure/azure-iot-sdk-c' }}
+      repository: ${{ inputs.repository || 'aws/aws-iot-device-sdk-embedded-C' }}
       ref: ${{ inputs.ref }}
-      build_script: azure-iot-sdk-c.sh
+      build_script: aws_aws-iot-device-sdk-embedded-C.sh
