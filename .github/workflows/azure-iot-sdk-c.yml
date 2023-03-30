@@ -12,20 +12,13 @@ on:
     inputs:
       repository:
         description: 'Repository to run CodeQL on. Format: owner/repo.'
-        required: false
+        required: true
         type: string
         default: Azure/azure-iot-sdk-c
       ref:
         description: 'The branch, tag or SHA to checkout. Default: default branch.'
         required: false
         type: string
-      build_script:
-        description: >
-          Build script (relative path from .github/build-scripts/).
-          Use Autobuild if left blank.
-        required: false
-        type: string
-        default: azure-iot-sdk-c.sh
 
 jobs:
   call_codeql_workflow:
@@ -35,6 +28,6 @@ jobs:
       security-events: write
     uses: ./.github/workflows/codeql.yml
     with:
-      repository: ${{ inputs.repository }}
+      repository: ${{ inputs.repository || 'Azure/azure-iot-sdk-c' }}
       ref: ${{ inputs.ref }}
-      build_script: ${{ inputs.build_script }}
+      build_script: azure-iot-sdk-c.sh
