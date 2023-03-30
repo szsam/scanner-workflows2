@@ -2,7 +2,7 @@ name: "CodeQL: aws/aws-iot-device-sdk-embedded-C"
 
 on:
   schedule:
-    - cron: '48 4 * * *'
+    - cron: '50 4 * * *'
   workflow_dispatch:
     inputs:
       repository:
