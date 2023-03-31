@@ -28,6 +28,11 @@ on:
           Default: Autobuild.
         required: false
         type: string
+      install_arm_cross_compiler:
+        description: 'Install Arm GNU Toolchain (arm-none-eabi-gcc)'
+        required: false
+        type: boolean
+        default: false
 
   workflow_call:
     inputs:
@@ -45,6 +50,11 @@ on:
           Default: Autobuild.
         required: false
         type: string
+      install_arm_cross_compiler:
+        description: 'Install Arm GNU Toolchain (arm-none-eabi-gcc)'
+        required: false
+        type: boolean
+        default: false
 
 
 jobs:
@@ -91,6 +101,10 @@ jobs:
         # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         queries: security-and-quality
         source-root: rut
+
+    - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
+      uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
+      if: inputs.install_arm_cross_compiler
 
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
