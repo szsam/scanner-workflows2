@@ -1,0 +1,28 @@
+name: "CodeQL: Azure/azure-sdk-for-c"
+
+on:
+  schedule:
+    - cron: '50 4 * * *'
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: Azure/azure-sdk-for-c
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: ./.github/workflows/codeql.yml
+    with:
+      repository: ${{ inputs.repository || 'Azure/azure-sdk-for-c' }}
+      ref: ${{ inputs.ref }}
+      build_script: ''
