@@ -4,5 +4,5 @@ sudo apt-get update -y
 sudo apt-get install -y ninja-build
 
 cd Microchip/ATSAME54-XPRO
-cmake -Bbuild -GNinja -DCMAKE_TOOLCHAIN_FILE="../../cmake/cortex_m4.cmake"
+cmake -Bbuild -GNinja -DCMAKE_TOOLCHAIN_FILE="../../cmake/arm-gcc-cortex-m4.cmake"
 cmake --build build
