@@ -105,7 +105,7 @@ jobs:
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
       uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
       with:
-        release: '10-2021.10'
+        release: '10.3-2021.10'
       if: inputs.install_arm_cross_compiler
 
 
