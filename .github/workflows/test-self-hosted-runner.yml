@@ -1,4 +1,4 @@
-name: "CodeQL: aws/aws-iot-device-sdk-embedded-C"
+name: "Test self-hosted runner"
 
 on:
   workflow_dispatch
