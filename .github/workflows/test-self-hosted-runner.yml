@@ -1,0 +1,12 @@
+name: "CodeQL: aws/aws-iot-device-sdk-embedded-C"
+
+on:
+  workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: self-hosted
+
+    steps:
+    - name: Run command
+      run: codeql --version
