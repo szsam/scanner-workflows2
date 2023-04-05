@@ -1,8 +1,6 @@
 name: "CodeQL: azure-rtos/threadx"
 
 on:
-  schedule:
-    - cron: '50 4 * * *'
   workflow_dispatch:
     inputs:
       repository:

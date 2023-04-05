@@ -1,8 +1,6 @@
 name: "CodeQL: Azure/azure-sdk-for-c"
 
 on:
-  schedule:
-    - cron: '50 4 * * *'
   workflow_dispatch:
     inputs:
       repository:
