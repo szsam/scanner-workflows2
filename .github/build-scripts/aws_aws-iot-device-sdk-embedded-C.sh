@@ -3,7 +3,7 @@
 #https://github.com/aws/aws-iot-device-sdk-embedded-C/blob/929a86dbbd9bb546872b383e955f8b420448c3e9/.github/workflows/ci.yml#L20
 
 sudo apt-get update -y
-sudo apt-get install -y libmosquitto-dev
+sudo apt-get install -y libssl-dev libmosquitto-dev
 curl https://cmake.org/files/v3.2/cmake-3.2.0-Linux-x86_64.tar.gz -o cmake.tar.gz
 tar -xf cmake.tar.gz
 mkdir build && cd build
