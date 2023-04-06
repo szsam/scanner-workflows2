@@ -19,7 +19,7 @@ jobs:
       actions: read
       contents: read
       security-events: write
-    uses: ./.github/workflows/codeql.yml
+    uses: ./.github/workflows/codeql-cli.yml
     with:
       repository: ${{ inputs.repository || 'Azure/azure-iot-sdk-c' }}
       ref: ${{ inputs.ref }}
