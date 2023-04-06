@@ -126,7 +126,7 @@ jobs:
       working-directory: rut
       run: >
         codeql database create db/ --language=cpp
-        --command='. ${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}'
+        --command='${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}'
 
     - name: Perform CodeQL Analysis
       working-directory: rut
