@@ -9,4 +9,7 @@ jobs:
 
     steps:
     - name: Run command
-      run: codeql --version
+      run: |
+        lsb_release -a
+        whoami
+        codeql --version || true
