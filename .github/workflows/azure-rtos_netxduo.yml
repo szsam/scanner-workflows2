@@ -14,15 +14,15 @@ on:
         type: string
 
 jobs:
-  call_codeql_workflow:
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-    uses: ./.github/workflows/codeql-cli.yml
-    secrets: inherit
-    with:
-      repository: ${{ inputs.repository || 'azure-rtos/netxduo' }}
-      ref: ${{ inputs.ref }}
-      build_script: 'azure-rtos_netxduo.sh'
-      install_arm_cross_compiler: true
+  #call_codeql_workflow:
+  #  permissions:
+  #    actions: read
+  #    contents: read
+  #    security-events: write
+  #  uses: ./.github/workflows/codeql-cli.yml
+  #  secrets: inherit
+  #  with:
+  #    repository: ${{ inputs.repository || 'azure-rtos/netxduo' }}
+  #    ref: ${{ inputs.ref }}
+  #    build_script: 'azure-rtos_netxduo.sh'
+  #    install_arm_cross_compiler: true
