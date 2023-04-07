@@ -115,3 +115,14 @@ jobs:
         name: codeql-results
         path: |
           ${{ env.CODEQL_RESULT_PATH }}
+
+    - name: Push codeql results to purs3lab/OSSEmbeddedResults
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      with:
+        source-directory: ${{ env.CODEQL_RESULT_PATH }}
+        destination-github-username: 'purs3lab'
+        destination-repository-name: 'OSSEmbeddedResults'
+        user-email: shen497@purdue.edu
+        target-branch: main
