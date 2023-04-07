@@ -20,6 +20,7 @@ jobs:
       contents: read
       security-events: write
     uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
     with:
       repository: ${{ inputs.repository || 'Azure/azure-iot-sdk-c' }}
       ref: ${{ inputs.ref }}
