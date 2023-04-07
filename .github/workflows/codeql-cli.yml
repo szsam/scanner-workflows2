@@ -69,6 +69,7 @@ jobs:
       run: |
         echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
         echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
+        mkdir -p $CODEQL_RESULT_PATH
 
     - name: Checkout scanner repository
       uses: actions/checkout@v3
