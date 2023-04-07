@@ -13,3 +13,9 @@ jobs:
         lsb_release -a
         whoami
         codeql --version || true
+
+    - name: Test push-to-another-repo
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      run: |
+        echo $SSH_DEPLOY_KEY
