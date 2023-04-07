@@ -117,6 +117,8 @@ jobs:
           ${{ env.CODEQL_RESULT_PATH }}
 
     - name: Test push-to-another-repo
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
       run: |
         if [ -n "${SSH_DEPLOY_KEY:=}" ]
         then
