@@ -64,11 +64,12 @@ jobs:
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
-    env:
-      CODEQL_DATABASE_PATH: ${{ runner.temp }}/db
-      CODEQL_RESULT_PATH: ${{ runner.temp }}/cpp.sarif
-
     steps:
+    - name: Set environment variables
+      run: |
+        echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
+        echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/cpp.sarif" >> $GITHUB_ENV
+
     - name: Checkout scanner repository
       uses: actions/checkout@v3
       with:
