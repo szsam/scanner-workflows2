@@ -116,10 +116,21 @@ jobs:
         path: |
           ${{ env.CODEQL_RESULT_PATH }}
 
-    - name: Push codeql results to purs3lab/OSSEmbeddedResults
+    - name: Test push-to-another-repo
       env:
         SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      run: |
+        if [ -n "${SSH_DEPLOY_KEY:=}" ]
+        then
+          echo "[+] Using SSH_DEPLOY_KEY"
+        else
+          echo "KEY is empty!!"
+        fi
+
+    - name: Push codeql results to purs3lab/OSSEmbeddedResults
       uses: cpina/github-action-push-to-another-repository@main
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
       with:
         source-directory: ${{ env.CODEQL_RESULT_PATH }}
         destination-github-username: 'purs3lab'
