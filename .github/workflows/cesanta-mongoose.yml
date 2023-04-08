@@ -1,0 +1,24 @@
+name: "CodeQL: cesanta/mongoose"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: cesanta/mongoose
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'cesanta/mongoose' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'cesanta-mongoose.sh'
+      install_arm_cross_compiler: false
