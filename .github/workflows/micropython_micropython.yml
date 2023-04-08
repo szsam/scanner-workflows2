@@ -1,0 +1,28 @@
+name: "CodeQL: micropython/micropython"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: micropython/micropython
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    #permissions:
+    #  actions: read
+    #  contents: read
+    #  security-events: write
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'micropython/micropython' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'micropython_micropython.sh'
+      install_arm_cross_compiler: true
