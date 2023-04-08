@@ -109,7 +109,7 @@ jobs:
       working-directory: rut
       run: |
         rm -rf ../result && mkdir -p ../result
-        codeql database analyze $CODEQL_DATABASE_PATH --format=sarif-latest --output=../result/cpp.sarif --download codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
+        codeql database analyze $CODEQL_DATABASE_PATH --format=sarif-latest --output=../result/cpp.sarif --download --threads=0 codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
