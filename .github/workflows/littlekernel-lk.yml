@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'littlekernel/lk' }}
       ref: ${{ inputs.ref }}
       build_script: 'littlekernel-lk.sh'
-      install_arm-none-eabi-gcc: false
+      install_arm-none-eabi-gcc: true
