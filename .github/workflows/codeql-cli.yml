@@ -131,6 +131,6 @@ jobs:
         target-branch: main
         target-directory: ${{ inputs.repository }}
         commit-message: >
-          CodeQL result of
+          Upload CodeQL result of
           ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
-          pushed by ORIGIN_COMMIT
+          by ORIGIN_COMMIT
