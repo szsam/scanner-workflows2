@@ -65,11 +65,6 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Set environment variables
-      run: |
-        echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
-        #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
-
     - name: Checkout scanner repository
       uses: actions/checkout@v3
       with:
@@ -82,6 +77,13 @@ jobs:
         ref: ${{ inputs.ref }}
         submodules: recursive
         path: rut
+
+    - name: Set environment variables
+      working-directory: rut
+      run: |
+        echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
+        #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
+        echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
       uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
@@ -128,3 +130,7 @@ jobs:
         user-email: shen497@purdue.edu
         target-branch: main
         target-directory: ${{ inputs.repository }}
+        commit-message: >
+          CodeQL result of
+          ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
+          pushed by ORIGIN_COMMIT
