@@ -25,4 +25,4 @@ jobs:
       repository: ${{ inputs.repository || 'micropython/micropython' }}
       ref: ${{ inputs.ref }}
       build_script: 'micropython_micropython.sh'
-      install_arm_cross_compiler: true
+      install_arm-none-eabi-gcc: true

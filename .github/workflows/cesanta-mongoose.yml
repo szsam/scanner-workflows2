@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'cesanta/mongoose' }}
       ref: ${{ inputs.ref }}
       build_script: 'cesanta-mongoose.sh'
-      install_arm_cross_compiler: false
+      install_arm-none-eabi-gcc: false

@@ -25,4 +25,4 @@ jobs:
       repository: ${{ inputs.repository || 'azure-rtos/threadx' }}
       ref: ${{ inputs.ref }}
       build_script: 'azure-rtos_threadx.sh'
-      install_arm_cross_compiler: true
+      install_arm-none-eabi-gcc: true

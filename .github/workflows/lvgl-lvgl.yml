@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'lvgl/lvgl' }}
       ref: ${{ inputs.ref }}
       build_script: 'lvgl-lvgl.sh'
-      install_arm_cross_compiler: false
+      install_arm-none-eabi-gcc: false

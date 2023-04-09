@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'raysan5/raylib' }}
       ref: ${{ inputs.ref }}
       build_script: 'raysan5-raylib.sh'
-      install_arm_cross_compiler: false
+      install_arm-none-eabi-gcc: false

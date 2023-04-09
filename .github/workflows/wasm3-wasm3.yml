@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'wasm3/wasm3' }}
       ref: ${{ inputs.ref }}
       build_script: ''
-      install_arm_cross_compiler: false
+      install_arm-none-eabi-gcc: false

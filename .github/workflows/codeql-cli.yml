@@ -17,7 +17,7 @@ on:
           Default: Autobuild.
         required: false
         type: string
-      install_arm_cross_compiler:
+      install_arm-none-eabi-gcc:
         description: 'Install Arm GNU Toolchain (arm-none-eabi-gcc)'
         required: false
         type: boolean
@@ -39,7 +39,7 @@ on:
           Default: Autobuild.
         required: false
         type: string
-      install_arm_cross_compiler:
+      install_arm-none-eabi-gcc:
         description: 'Install Arm GNU Toolchain (arm-none-eabi-gcc)'
         required: false
         type: boolean
@@ -87,7 +87,7 @@ jobs:
       uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
       with:
         release: '10.3-2021.10'
-      if: inputs.install_arm_cross_compiler
+      if: inputs.install_arm-none-eabi-gcc
 
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
