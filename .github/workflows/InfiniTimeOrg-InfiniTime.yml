@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'InfiniTimeOrg/InfiniTime' }}
       ref: ${{ inputs.ref }}
       build_script: 'InfiniTimeOrg-InfiniTime.sh'
-      install_arm-none-eabi-gcc: false
+      install_arm-none-eabi-gcc: true
