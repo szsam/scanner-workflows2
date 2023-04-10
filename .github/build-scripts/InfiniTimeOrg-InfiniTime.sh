@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
+set -e
+
+sudo apt-get install -y python3-venv python3-pip
+
+wget --no-verbose 'https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.3.0_59ac345.zip'
+unzip nRF5_SDK_15.3.0_59ac345
+
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install -q wheel
-python3 -m pip install -q -r tools/mcuboot/requirements.txt
+python3 -m pip install wheel
+python3 -m pip install -r tools/mcuboot/requirements.txt
 
-wget 'https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.3.0_59ac345.zip'
-unzip nRF5_SDK_15.3.0_59ac345
 ls -al
 mkdir build
 cd build
