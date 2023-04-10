@@ -44,6 +44,11 @@ on:
         required: false
         type: boolean
         default: false
+      install_node:
+        description: 'Install node'
+        required: false
+        type: boolean
+        default: false
 
 
 jobs:
@@ -91,6 +96,11 @@ jobs:
         release: '10.3-2021.10'
       if: inputs.install_arm-none-eabi-gcc
 
+    - name: Set node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+      if: inputs.install_node
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then we should run the build manually (see below)
