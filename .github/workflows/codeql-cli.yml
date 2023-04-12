@@ -139,7 +139,7 @@ jobs:
         destination-repository-name: 'OSSEmbeddedResults'
         user-email: shen497@purdue.edu
         target-branch: main
-        target-directory: ${{ inputs.repository }}
+        target-directory: ${{ inputs.repository }}/${{ env.RUT_SHA }}
         commit-message: >
           Upload CodeQL result of
           ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
