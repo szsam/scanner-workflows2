@@ -128,6 +128,7 @@ jobs:
       with:
         name: codeql-results
         path: result
+        retention-days: 5
 
     - name: Push codeql results to purs3lab/OSSEmbeddedResults
       uses: cpina/github-action-push-to-another-repository@main
