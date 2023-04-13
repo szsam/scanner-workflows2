@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'contiki-ng/contiki-ng' }}
       ref: ${{ inputs.ref }}
       build_script: 'contiki-ng-contiki-ng.sh'
-      install_arm-none-eabi-gcc: false
+      install_arm-none-eabi-gcc: true
