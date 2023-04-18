@@ -1,4 +1,4 @@
-name: "CodeQL: ARMmbed/mbed-os-example-blinky"
+name: "CodeQL: IVOES/mbed-os-example-blinky"
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
         description: 'Repository to run CodeQL on. Format: owner/repo.'
         required: true
         type: string
-        default: ARMmbed/mbed-os-example-blinky
+        default: IVOES/mbed-os-example-blinky
       ref:
         description: 'The branch, tag or SHA to checkout. Default: default branch.'
         required: false
@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/codeql-cli.yml
     secrets: inherit
     with:
-      repository: ${{ inputs.repository || 'ARMmbed/mbed-os-example-blinky' }}
+      repository: ${{ inputs.repository || 'IVOES/mbed-os-example-blinky' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ARMmbed-mbed-os-example-blinky.sh'
+      build_script: 'IVOES-mbed-os-example-blinky.sh'
       install_arm-none-eabi-gcc: true
