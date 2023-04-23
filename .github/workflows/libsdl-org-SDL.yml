@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'libsdl-org/SDL' }}
       ref: ${{ inputs.ref }}
-      build_script: ''
+      build_script: 'libsdl-org-SDL.sh'
       install_arm-none-eabi-gcc: false
