@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-sudo apt install clang
+sudo apt -y install clang
 make sod
