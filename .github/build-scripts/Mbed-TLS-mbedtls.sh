@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 
-# https://github.com/Mbed-TLS/mbedtls
-
-pip3 install jsonschema
-cmake -DCMAKE_BUILD_TYPE=Release .
+python3 -m pip install --user -r scripts/basic.requirements.txt
 make -j$(nproc)
-make test
-sudo make install
