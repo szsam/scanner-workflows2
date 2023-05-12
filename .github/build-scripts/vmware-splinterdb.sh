@@ -6,5 +6,3 @@ sudo apt-get install -y libaio-dev libconfig-dev libxxhash-dev $COMPILER
 export CC=$COMPILER
 export LD=$COMPILER
 make
-# make run-tests
-# sudo make install
