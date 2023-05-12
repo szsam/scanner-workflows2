@@ -3,4 +3,4 @@
 sudo apt-get update
 sudo apt-get install -y autoconf
 ./autogen.sh
-./configure; make; # sudo make install
+./configure; make;
