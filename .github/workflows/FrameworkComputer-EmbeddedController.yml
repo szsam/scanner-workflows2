@@ -1,0 +1,24 @@
+name: "CodeQL: FrameworkComputer/EmbeddedController"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: FrameworkComputer/EmbeddedController
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'FrameworkComputer/EmbeddedController' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'FrameworkComputer-EmbeddedController.sh'
+      install_arm-none-eabi-gcc: false
