@@ -20,5 +20,5 @@ ${dir}/provide_gcc.sh
 # Add the compiler to your path
 export PATH=$HOME/.rusefi-tools/gcc-arm-none-eabi/bin:$PATH
 
-cd firmware
+cd ${dir}
 make -j$(nproc)
