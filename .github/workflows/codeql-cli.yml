@@ -131,6 +131,7 @@ jobs:
           -**:cpp/world-writable-file-creation
           -**:cpp/poorly-documented-function
           -**:cpp/potentially-dangerous-function
+          -**/third_party/**
         input: result/cpp.sarif
         output: result/cpp.sarif
 
