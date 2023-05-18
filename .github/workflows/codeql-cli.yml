@@ -123,6 +123,18 @@ jobs:
         rm -rf ../result && mkdir -p ../result
         codeql database analyze $CODEQL_DATABASE_PATH --format=sarif-latest --output=../result/cpp.sarif --download --threads=0 codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
 
+    - name: Filter out uninteresting errors and warnings
+      uses: advanced-security/filter-sarif@v1
+      with:
+        patterns: |
+          -**:cpp/path-injection
+          -**:cpp/world-writable-file-creation
+          -**:cpp/poorly-documented-function
+          -**:cpp/potentially-dangerous-function
+          -**/third_party/**
+        input: result/cpp.sarif
+        output: result/cpp.sarif
+
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
       with:
