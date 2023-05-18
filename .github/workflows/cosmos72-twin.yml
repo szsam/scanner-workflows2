@@ -1,0 +1,24 @@
+name: "CodeQL: cosmos72/twin"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: cosmos72/twin
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'cosmos72/twin' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'cosmos72-twin.sh'
+      install_arm-none-eabi-gcc: false
