@@ -132,6 +132,7 @@ jobs:
           -**:cpp/poorly-documented-function
           -**:cpp/potentially-dangerous-function
           -**/third_party/**
+          -**/3rd/**
         input: result/cpp.sarif
         output: result/cpp.sarif
 
