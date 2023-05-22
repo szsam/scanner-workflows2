@@ -1,0 +1,24 @@
+name: "CodeQL: gkostka/lwext4"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: gkostka/lwext4
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'gkostka/lwext4' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'gkostka-lwext4.sh'
+      install_arm-none-eabi-gcc: false
