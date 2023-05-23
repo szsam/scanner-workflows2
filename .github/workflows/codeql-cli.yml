@@ -133,6 +133,7 @@ jobs:
           -**:cpp/potentially-dangerous-function
           -**/third_party/**
           -**/3rd/**
+          -**/external/**
         input: result/cpp.sarif
         output: result/cpp.sarif
 
