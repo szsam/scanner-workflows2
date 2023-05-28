@@ -1,0 +1,24 @@
+name: "CodeQL: zcutlip/nvram-faker"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: zcutlip/nvram-faker
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'zcutlip/nvram-faker' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'zcutlip-nvram-faker.sh'
+      install_arm-none-eabi-gcc: false
