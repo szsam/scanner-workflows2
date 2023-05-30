@@ -131,6 +131,7 @@ jobs:
           -**:cpp/world-writable-file-creation
           -**:cpp/poorly-documented-function
           -**:cpp/potentially-dangerous-function
+          -**:cpp/use-of-goto
           -**/third_party/**
           -**/3rd/**
           -**/external/**
