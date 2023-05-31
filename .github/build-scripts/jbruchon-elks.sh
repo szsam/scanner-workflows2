@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
 # build script included
-./build.sh
+mkdir cross
+tools/build.sh
+. ./env.sh
+make all
