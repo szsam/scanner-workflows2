@@ -1,0 +1,24 @@
+name: "CodeQL: lvgl/lv_port_pc_eclipse"
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository to run CodeQL on. Format: owner/repo.'
+        required: true
+        type: string
+        default: lvgl/lv_port_pc_eclipse
+      ref:
+        description: 'The branch, tag or SHA to checkout. Default: default branch.'
+        required: false
+        type: string
+
+jobs:
+  call_codeql_workflow:
+    uses: ./.github/workflows/codeql-cli.yml
+    secrets: inherit
+    with:
+      repository: ${{ inputs.repository || 'lvgl/lv_port_pc_eclipse' }}
+      ref: ${{ inputs.ref }}
+      build_script: 'lvgl-lv_port_pc_eclipse.sh'
+      install_arm-none-eabi-gcc: false
