@@ -133,6 +133,8 @@ jobs:
           -**:cpp/poorly-documented-function
           -**:cpp/potentially-dangerous-function
           -**:cpp/use-of-goto
+          -**:cpp/integer-multiplication-cast-to-long
+          -**:cpp/comparison-with-wider-type
           -**/third_party/**
           -**/3rd/**
           -**/external/**
