@@ -81,6 +81,7 @@ jobs:
         repository: ${{ inputs.repository }}
         ref: ${{ inputs.ref }}
         submodules: recursive
+        fetch-depth: 0
         path: rut
 
     - name: Set environment variables
