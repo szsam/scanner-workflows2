@@ -33,9 +33,15 @@ on:
         description: 'The branch, tag or SHA to checkout. Default: default branch.'
         required: false
         type: string
+      install_script:
+        description: >
+          Install script (relative path from .github/install-scripts of scanner repo).
+          Default: None.
+        required: false
+        type: string
       build_script:
         description: >
-          Build script (relative path from the root of scanner repo).
+          Build script (relative path from .github/build-scripts of scanner repo).
           Default: Autobuild.
         required: false
         type: string
@@ -102,6 +108,12 @@ jobs:
       with:
         node-version: 16
       if: inputs.install_node
+
+    - name: Install dependencies needed by RUT
+      if: ${{ inputs.install_script != '' }}
+      working-directory: rut
+      run: >
+        ${{ github.workspace }}/scanner/.github/install-scripts/${{ inputs.install_script }}
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then we should run the build manually (see below)
