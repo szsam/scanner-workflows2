@@ -3,7 +3,7 @@
 export RTT_EXEC_PATH="$(dirname $(which arm-none-eabi-gcc))"
 cd bsp
 
-scons -j$(nproc) -C qemu-vexpress-a9
+#scons -j$(nproc) -C qemu-vexpress-a9
 scons -j$(nproc) -C stm32/stm32l4r5-st-nucleo
 scons -j$(nproc) -C stm32/stm32f103-atk-nano
 scons -j$(nproc) -C stm32/stm32f207-st-nucleo
