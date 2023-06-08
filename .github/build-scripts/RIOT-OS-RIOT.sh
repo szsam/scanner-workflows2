@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-make -C examples/default/ all
+for d in $(find examples/ -maxdepth 1 -type d); do
+  make -C "$d" -j$(nproc)
+done
