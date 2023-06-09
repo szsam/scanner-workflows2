@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'TrampolineRTOS/trampoline' }}
       ref: ${{ inputs.ref }}
       build_script: 'TrampolineRTOS-trampoline.sh'
-      install_arm-none-eabi-gcc: false
+      install_arm-none-eabi-gcc: true

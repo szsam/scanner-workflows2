@@ -20,6 +20,6 @@ done
 for app in $(find "$ROOT_DIR/examples/arm/nxt" -mindepth 1 -maxdepth 1 -type d); do
   cd "$app"
   $GOIL --target=arm/nxt *.oil
-  make -j$(nproc)
-  make clean
+  ./make.py
+  ./make.py clean
 done
