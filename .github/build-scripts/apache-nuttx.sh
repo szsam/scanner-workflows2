@@ -4,7 +4,10 @@ sudo apt-get install kconfig-frontends
 
 git clone https://github.com/apache/nuttx-apps.git ../apps
 
-./tools/configure.sh stm32f103-minimum:hello
-make -j$(nproc)
+for cfg in $(./tools/configure.sh  -L | grep 'stm32f103-minimum'); do
+  make distclean
+  ./tools/configure.sh $cfg
+  make CROSSDEV=arm-none-eabi- -j$(nproc)
+done
 
 rm -rf ../apps
