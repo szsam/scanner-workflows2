@@ -15,3 +15,10 @@ for app in $(find "$PWD/examples/posix/" -mindepth 1 -maxdepth 1 -type d); do
   ./make.py
   ./make.py clean
 done
+
+for app in $(find "$PWD/examples/arm/nxt" -mindepth 1 -maxdepth 1 -type d); do
+  cd "$app"
+  $GOIL --target=arm/nxt *.oil
+  make -j$(nproc)
+  make clean
+done
