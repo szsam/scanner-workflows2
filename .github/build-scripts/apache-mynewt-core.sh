@@ -12,6 +12,11 @@ sudo apt-get install -y newt gcc-multilib
 # .github/workflows/build_blinky.yml
 cp .github/project.yml project.yml
 newt upgrade --shallow=1
+rm -rf $RUNNER_TEMP/blinky
 git clone https://github.com/apache/mynewt-blinky.git $RUNNER_TEMP/blinky
 cp -r $RUNNER_TEMP/blinky/apps/blinky/ apps/blinky
 bash .github/test_build_blinky.sh
+
+# .github/workflows/build_targets.yml
+cp -r .github/targets ci_targets
+ls ci_targets | xargs -n1 sh -c 'echo "Testing $0"; newt build -q $0'
