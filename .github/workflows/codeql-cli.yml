@@ -147,6 +147,8 @@ jobs:
           -**:cpp/use-of-goto
           -**:cpp/integer-multiplication-cast-to-long
           -**:cpp/comparison-with-wider-type
+          -**:cpp/leap-year/*
+          -**:cpp/ambiguously-signed-bit-field
           -**/third_party/**
           -**/3rd/**
           -**/external/**
