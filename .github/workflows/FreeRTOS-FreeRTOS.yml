@@ -21,4 +21,4 @@ jobs:
       repository: ${{ inputs.repository || 'FreeRTOS/FreeRTOS' }}
       ref: ${{ inputs.ref }}
       build_script: 'FreeRTOS-FreeRTOS.sh'
-      install_arm-none-eabi-gcc: false
+      install_arm-none-eabi-gcc: true
