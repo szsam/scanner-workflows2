@@ -127,8 +127,7 @@ jobs:
       if: ${{ inputs.build_script != '' }}
       working-directory: rut
       run: >
-        codeql database create $CODEQL_DATABASE_PATH --language=cpp
-        --command "${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}"
+        bash -c "${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}"
 
     - name: Perform CodeQL Analysis
       working-directory: rut
