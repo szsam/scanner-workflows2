@@ -129,50 +129,50 @@ jobs:
       run: >
         bear -- ${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}
 
-    - name: Perform CodeQL Analysis
-      working-directory: rut
-      run: |
-        rm -rf ../result && mkdir -p ../result
-        codeql database analyze $CODEQL_DATABASE_PATH --format=sarif-latest --output=../result/cpp.sarif --download --threads=0 codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
+    # - name: Perform CodeQL Analysis
+    #   working-directory: rut
+    #   run: |
+    #     rm -rf ../result && mkdir -p ../result
+    #     codeql database analyze $CODEQL_DATABASE_PATH --format=sarif-latest --output=../result/cpp.sarif --download --threads=0 codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
 
-    - name: Filter out uninteresting errors and warnings
-      uses: advanced-security/filter-sarif@v1
-      with:
-        patterns: |
-          -**:cpp/path-injection
-          -**:cpp/world-writable-file-creation
-          -**:cpp/poorly-documented-function
-          -**:cpp/potentially-dangerous-function
-          -**:cpp/use-of-goto
-          -**:cpp/integer-multiplication-cast-to-long
-          -**:cpp/comparison-with-wider-type
-          -**:cpp/leap-year/*
-          -**:cpp/ambiguously-signed-bit-field
-          -**/third_party/**
-          -**/3rd/**
-          -**/external/**
-        input: result/cpp.sarif
-        output: result/cpp.sarif
+    # - name: Filter out uninteresting errors and warnings
+    #   uses: advanced-security/filter-sarif@v1
+    #   with:
+    #     patterns: |
+    #       -**:cpp/path-injection
+    #       -**:cpp/world-writable-file-creation
+    #       -**:cpp/poorly-documented-function
+    #       -**:cpp/potentially-dangerous-function
+    #       -**:cpp/use-of-goto
+    #       -**:cpp/integer-multiplication-cast-to-long
+    #       -**:cpp/comparison-with-wider-type
+    #       -**:cpp/leap-year/*
+    #       -**:cpp/ambiguously-signed-bit-field
+    #       -**/third_party/**
+    #       -**/3rd/**
+    #       -**/external/**
+    #     input: result/cpp.sarif
+    #     output: result/cpp.sarif
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
       with:
-        name: codeql-results
-        path: result
+        name: compile_commands
+        path: compile_commands.json
         retention-days: 5
 
-    - name: Push codeql results to purs3lab/OSSEmbeddedResults
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-      with:
-        source-directory: result
-        destination-github-username: 'purs3lab'
-        destination-repository-name: 'OSSEmbeddedResults'
-        user-email: shen497@purdue.edu
-        target-branch: main
-        target-directory: ${{ inputs.repository }}/${{ env.RUT_SHA }}
-        commit-message: >
-          Upload CodeQL result of
-          ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
-          by ORIGIN_COMMIT
+    # - name: Push codeql results to purs3lab/OSSEmbeddedResults
+    #   uses: cpina/github-action-push-to-another-repository@main
+    #   env:
+    #     SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+    #   with:
+    #     source-directory: result
+    #     destination-github-username: 'purs3lab'
+    #     destination-repository-name: 'OSSEmbeddedResults'
+    #     user-email: shen497@purdue.edu
+    #     target-branch: main
+    #     target-directory: ${{ inputs.repository }}/${{ env.RUT_SHA }}
+    #     commit-message: >
+    #       Upload CodeQL result of
+    #       ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
+    #       by ORIGIN_COMMIT
