@@ -93,7 +93,7 @@ jobs:
     - name: Set environment variables
       working-directory: rut
       run: |
-        echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
+        # echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
         #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
         echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
@@ -127,8 +127,7 @@ jobs:
       if: ${{ inputs.build_script != '' }}
       working-directory: rut
       run: >
-        codeql database create $CODEQL_DATABASE_PATH --language=cpp
-        --command "${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}"
+        "${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}"
 
     # - name: Perform CodeQL Analysis
     #   working-directory: rut
