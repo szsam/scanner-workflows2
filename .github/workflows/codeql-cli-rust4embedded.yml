@@ -129,6 +129,10 @@ jobs:
       run: >
         bear -- ${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}
 
+    # # tmp
+    # - name: [r4e] list files
+      
+
     # - name: Perform CodeQL Analysis
     #   working-directory: rut
     #   run: |
@@ -156,6 +160,7 @@ jobs:
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
+      working-directory: rut
       with:
         name: compile_commands
         path: compile_commands.json
