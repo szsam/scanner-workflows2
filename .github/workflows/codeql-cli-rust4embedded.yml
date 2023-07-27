@@ -127,7 +127,7 @@ jobs:
       if: ${{ inputs.build_script != '' }}
       working-directory: rut
       run: >
-        bash -c "${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}"
+        bear -- ${{ github.workspace }}/scanner/.github/build-scripts/${{ inputs.build_script }}
 
     - name: Perform CodeQL Analysis
       working-directory: rut
