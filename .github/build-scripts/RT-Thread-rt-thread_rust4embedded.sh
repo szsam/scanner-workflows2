@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 export RTT_EXEC_PATH="$(dirname $(which arm-none-eabi-gcc))"
 cd bsp
 
