@@ -16,7 +16,7 @@ on:
 jobs:
   call_codeql_workflow:
     # uses: ./.github/workflows/codeql-cli-rust4embedded.yml
-    uses: ./.github/workflows/codeql-cli.yml
+    uses: ./.github/workflows/codeql-cli-rust4embedded.yml
     secrets: inherit
     with:
       repository: ${{ inputs.repository || 'RT-Thread/rt-thread' }}
