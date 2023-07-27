@@ -21,6 +21,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'RT-Thread/rt-thread' }}
       ref: ${{ inputs.ref }}
-      # build_script: 'RT-Thread-rt-thread_rust4embedded.sh'
       build_script: 'RT-Thread-rt-thread.sh'
       install_arm-none-eabi-gcc: true
