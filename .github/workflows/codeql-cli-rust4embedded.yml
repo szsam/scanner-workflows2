@@ -160,10 +160,9 @@ jobs:
 
     - name: Archive CodeQL results
       uses: actions/upload-artifact@v3
-      working-directory: rut
       with:
         name: compile_commands
-        path: compile_commands.json
+        path: rut/compile_commands.json
         retention-days: 5
 
     # - name: Push codeql results to purs3lab/OSSEmbeddedResults
