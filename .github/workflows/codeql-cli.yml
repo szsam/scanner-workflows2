@@ -96,7 +96,9 @@ jobs:
         echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
         #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
         echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
-        echo "IGNORE_SM=$(git submodule foreach --quiet 'echo -$sm_path/**')" \
+        #echo "IGNORE_SM=$(git submodule foreach --quiet 'echo -$sm_path/**')" \
+        #  >> $GITHUB_ENV
+        echo "IGNORE_SM=$(git submodule foreach --quiet 'echo $sm_path')" \
           >> $GITHUB_ENV
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
