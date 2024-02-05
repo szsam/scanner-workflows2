@@ -96,12 +96,11 @@ jobs:
         echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
         #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
         echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
-        echo "IGNORE_SM<<EOF" >> $GITHUB_ENV
-        echo "$(git submodule foreach --quiet 'echo -$sm_path/**')" >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
-        cat $GITHUB_ENV
-        #echo "IGNORE_SM='-shared/lib/jsmn/src/** -shared/lib/netxduo/**'" \
-        #  >> $GITHUB_ENV
+        {
+          echo 'IGNORE_SM<<EOF'
+          echo "$(git submodule foreach --quiet 'echo -$sm_path/**')"
+          echo 'EOF'
+        } >> $GITHUB_ENV
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
       uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
@@ -158,6 +157,7 @@ jobs:
           -**/third_party/**
           -**/3rd/**
           -**/external/**
+          -**/cmake*/Modules/**
           ${{ env.IGNORE_SM }}
         input: result/cpp.sarif
         output: result/cpp.sarif
