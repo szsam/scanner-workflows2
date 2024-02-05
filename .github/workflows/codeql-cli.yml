@@ -96,8 +96,7 @@ jobs:
         echo "CODEQL_DATABASE_PATH=$RUNNER_TEMP/db" >> $GITHUB_ENV
         #echo "CODEQL_RESULT_PATH=$RUNNER_TEMP/result" >> $GITHUB_ENV
         echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
-        cat $GITHUB_ENV
-        echo IGNORE_SM=\'$(git submodule foreach --quiet 'echo -$sm_path/**')\' \
+        echo IGNORE_SM=\'"$(git submodule foreach --quiet 'echo -$sm_path/**')"\' \
           >> $GITHUB_ENV
         cat $GITHUB_ENV
         #echo "IGNORE_SM='-shared/lib/jsmn/src/** -shared/lib/netxduo/**'" \
@@ -145,7 +144,7 @@ jobs:
     - name: Filter out uninteresting errors and warnings
       uses: advanced-security/filter-sarif@v1
       with:
-        patterns: >
+        patterns: |
           -**:cpp/path-injection
           -**:cpp/world-writable-file-creation
           -**:cpp/poorly-documented-function
