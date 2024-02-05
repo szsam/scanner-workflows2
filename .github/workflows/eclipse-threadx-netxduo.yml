@@ -22,3 +22,4 @@ jobs:
       ref: ${{ inputs.ref }}
       build_script: 'eclipse-threadx-netxduo.sh'
       install_arm-none-eabi-gcc: true
+      sarif_filter_patterns: '-threadx/**'
