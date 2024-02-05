@@ -145,7 +145,7 @@ jobs:
     - name: Filter out uninteresting errors and warnings
       uses: advanced-security/filter-sarif@v1
       with:
-        patterns: |
+        patterns: >
           -**:cpp/path-injection
           -**:cpp/world-writable-file-creation
           -**:cpp/poorly-documented-function
