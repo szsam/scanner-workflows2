@@ -55,6 +55,10 @@ on:
         required: false
         type: boolean
         default: false
+      sarif_filter_patterns:
+        description: 'Additional patterns for advanced-security/filter-sarif'
+        required: false
+        type: string
 
 
 jobs:
@@ -159,6 +163,7 @@ jobs:
           -**/external/**
           -**/cmake*/Modules/**
           ${{ env.IGNORE_SM }}
+          ${{ inputs.sarif_filter_patterns }}
         input: result/cpp.sarif
         output: result/cpp.sarif
 
