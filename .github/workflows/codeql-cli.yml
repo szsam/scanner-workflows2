@@ -98,7 +98,7 @@ jobs:
         echo "RUT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
         #echo "IGNORE_SM=$(git submodule foreach --quiet 'echo -$sm_path/**')" \
         #  >> $GITHUB_ENV
-        echo "IGNORE_SM=$(git submodule foreach --quiet 'echo $sm_path')" \
+        echo "IGNORE_SM='-shared/lib/jsmn/src/** -shared/lib/netxduo/**'" \
           >> $GITHUB_ENV
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
