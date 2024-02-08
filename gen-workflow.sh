@@ -2,8 +2,10 @@
 
 set -e
 
-REPOSITORY=$1
-BASENAME=$(echo "$1" | sed 's|/|-|') # Replace '/' with '-'
+REPOSITORY=$1 # username/repo
+BASENAME=$(echo "$1" | sed 's|/|_|') # Replace '/' with '_'
+# Underscores (_) are not allowed in GitHub usernames,
+# so the first underscore in $BASENAME effectively separates username and repo.
 WORKFLOW=".github/workflows/$BASENAME.yml"
 BUILD_SCRIPT=".github/build-scripts/$BASENAME.sh"
 
