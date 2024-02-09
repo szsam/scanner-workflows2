@@ -81,12 +81,12 @@ jobs:
 
     steps:
     - name: Checkout scanner repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: scanner
 
     - name: Checkout repository under test
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
         ref: ${{ inputs.ref }}
@@ -107,7 +107,7 @@ jobs:
         } >> $GITHUB_ENV
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
-      uses: carlosperate/arm-none-eabi-gcc-action@v1.6.0
+      uses: carlosperate/arm-none-eabi-gcc-action@v1
       with:
         release: '10.3-2021.10'
       if: inputs.install_arm-none-eabi-gcc
@@ -171,7 +171,7 @@ jobs:
         output: result/cpp.sarif
 
     - name: Archive CodeQL results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: codeql-results
         path: result
