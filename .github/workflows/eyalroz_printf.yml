@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'eyalroz/printf' }}
       ref: ${{ inputs.ref }}
-      build_script: 'eyalroz-printf.sh'
+      build_script: 'eyalroz_printf.sh'
       install_arm-none-eabi-gcc: false

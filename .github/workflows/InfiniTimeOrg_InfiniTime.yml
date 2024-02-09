@@ -20,6 +20,6 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'InfiniTimeOrg/InfiniTime' }}
       ref: ${{ inputs.ref }}
-      build_script: 'InfiniTimeOrg-InfiniTime.sh'
+      build_script: 'InfiniTimeOrg_InfiniTime.sh'
       install_arm-none-eabi-gcc: true
       install_node: true

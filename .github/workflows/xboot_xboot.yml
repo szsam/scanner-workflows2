@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'xboot/xboot' }}
       ref: ${{ inputs.ref }}
-      build_script: 'xboot-xboot.sh'
+      build_script: 'xboot_xboot.sh'
       install_arm-none-eabi-gcc: false

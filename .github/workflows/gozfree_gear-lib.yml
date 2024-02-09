@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'gozfree/gear-lib' }}
       ref: ${{ inputs.ref }}
-      build_script: 'gozfree-gear-lib.sh'
+      build_script: 'gozfree_gear-lib.sh'
       install_arm-none-eabi-gcc: false

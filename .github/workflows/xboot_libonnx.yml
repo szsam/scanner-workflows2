@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'xboot/libonnx' }}
       ref: ${{ inputs.ref }}
-      build_script: 'xboot-libonnx.sh'
+      build_script: 'xboot_libonnx.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'rryqszq4/ngx-php' }}
       ref: ${{ inputs.ref }}
-      build_script: 'rryqszq4-ngx-php.sh'
+      build_script: 'rryqszq4_ngx-php.sh'
       install_arm-none-eabi-gcc: false

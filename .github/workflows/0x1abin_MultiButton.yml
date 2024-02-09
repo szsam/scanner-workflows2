@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || '0x1abin/MultiButton' }}
       ref: ${{ inputs.ref }}
-      build_script: '0x1abin-MultiButton.sh'
+      build_script: '0x1abin_MultiButton.sh'
       install_arm-none-eabi-gcc: false

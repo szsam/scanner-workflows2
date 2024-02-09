@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'layumi/2016_person_re-ID' }}
       ref: ${{ inputs.ref }}
-      build_script: 'layumi-2016_person_re-ID.sh'
+      build_script: 'layumi_2016_person_re-ID.sh'
       install_arm-none-eabi-gcc: false

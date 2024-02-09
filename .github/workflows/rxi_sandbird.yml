@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'rxi/sandbird' }}
       ref: ${{ inputs.ref }}
-      build_script: 'rxi-sandbird.sh'
+      build_script: 'rxi_sandbird.sh'
       install_arm-none-eabi-gcc: false

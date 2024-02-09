@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'stlink-org/stlink' }}
       ref: ${{ inputs.ref }}
-      build_script: 'stlink-org-stlink.sh'
+      build_script: 'stlink-org_stlink.sh'
       install_arm-none-eabi-gcc: false

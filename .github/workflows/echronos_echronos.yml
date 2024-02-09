@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'echronos/echronos' }}
       ref: ${{ inputs.ref }}
-      build_script: 'echronos-echronos.sh'
+      build_script: 'echronos_echronos.sh'
       install_arm-none-eabi-gcc: true

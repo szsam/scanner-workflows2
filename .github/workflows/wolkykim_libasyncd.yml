@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'wolkykim/libasyncd' }}
       ref: ${{ inputs.ref }}
-      build_script: 'wolkykim-libasyncd.sh'
+      build_script: 'wolkykim_libasyncd.sh'
       install_arm-none-eabi-gcc: false

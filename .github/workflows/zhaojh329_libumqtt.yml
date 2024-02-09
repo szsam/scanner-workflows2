@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'zhaojh329/libumqtt' }}
       ref: ${{ inputs.ref }}
-      build_script: 'zhaojh329-libumqtt.sh'
+      build_script: 'zhaojh329_libumqtt.sh'
       install_arm-none-eabi-gcc: false

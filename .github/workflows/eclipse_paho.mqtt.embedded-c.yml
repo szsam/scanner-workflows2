@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'eclipse/paho.mqtt.embedded-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'eclipse-paho.mqtt.embedded-c.sh'
+      build_script: 'eclipse_paho.mqtt.embedded-c.sh'
       install_arm-none-eabi-gcc: false

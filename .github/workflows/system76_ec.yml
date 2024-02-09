@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'system76/ec' }}
       ref: ${{ inputs.ref }}
-      build_script: 'system76-ec.sh'
+      build_script: 'system76_ec.sh'
       install_arm-none-eabi-gcc: false

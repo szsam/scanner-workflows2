@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'rusefi/rusefi' }}
       ref: ${{ inputs.ref }}
-      build_script: 'rusefi-rusefi.sh'
+      build_script: 'rusefi_rusefi.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'zevv/zForth' }}
       ref: ${{ inputs.ref }}
-      build_script: 'zevv-zForth.sh'
+      build_script: 'zevv_zForth.sh'
       install_arm-none-eabi-gcc: false

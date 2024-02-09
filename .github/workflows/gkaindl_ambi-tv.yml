@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'gkaindl/ambi-tv' }}
       ref: ${{ inputs.ref }}
-      build_script: 'gkaindl-ambi-tv.sh'
+      build_script: 'gkaindl_ambi-tv.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'LibVNC/libvncserver' }}
       ref: ${{ inputs.ref }}
-      build_script: 'LibVNC-libvncserver.sh'
+      build_script: 'LibVNC_libvncserver.sh'
       install_arm-none-eabi-gcc: false

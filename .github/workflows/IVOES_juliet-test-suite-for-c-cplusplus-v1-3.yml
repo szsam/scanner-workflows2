@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'IVOES/juliet-test-suite-for-c-cplusplus-v1-3' }}
       ref: ${{ inputs.ref }}
-      build_script: 'IVOES-juliet-test-suite-for-c-cplusplus-v1-3.sh'
+      build_script: 'IVOES_juliet-test-suite-for-c-cplusplus-v1-3.sh'
       install_arm-none-eabi-gcc: false

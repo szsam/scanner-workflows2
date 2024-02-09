@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'civetweb/civetweb' }}
       ref: ${{ inputs.ref }}
-      build_script: 'civetweb-civetweb.sh'
+      build_script: 'civetweb_civetweb.sh'
       install_arm-none-eabi-gcc: false

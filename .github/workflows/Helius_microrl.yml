@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'Helius/microrl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'Helius-microrl.sh'
+      build_script: 'Helius_microrl.sh'
       install_arm-none-eabi-gcc: false

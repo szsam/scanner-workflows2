@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jiejieTop/mqttclient' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jiejieTop-mqttclient.sh'
+      build_script: 'jiejieTop_mqttclient.sh'
       install_arm-none-eabi-gcc: false

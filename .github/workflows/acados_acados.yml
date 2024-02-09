@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'acados/acados' }}
       ref: ${{ inputs.ref }}
-      build_script: 'acados-acados.sh'
+      build_script: 'acados_acados.sh'
       install_arm-none-eabi-gcc: false

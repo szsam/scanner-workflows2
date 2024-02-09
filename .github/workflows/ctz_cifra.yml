@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ctz/cifra' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ctz-cifra.sh'
+      build_script: 'ctz_cifra.sh'
       install_arm-none-eabi-gcc: false

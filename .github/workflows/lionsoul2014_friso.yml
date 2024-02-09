@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'lionsoul2014/friso' }}
       ref: ${{ inputs.ref }}
-      build_script: 'lionsoul2014-friso.sh'
+      build_script: 'lionsoul2014_friso.sh'
       install_arm-none-eabi-gcc: false

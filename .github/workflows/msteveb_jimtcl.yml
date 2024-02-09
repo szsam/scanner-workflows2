@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'msteveb/jimtcl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'msteveb-jimtcl.sh'
+      build_script: 'msteveb_jimtcl.sh'
       install_arm-none-eabi-gcc: false

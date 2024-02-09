@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cesanta/mjson' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cesanta-mjson.sh'
+      build_script: 'cesanta_mjson.sh'
       install_arm-none-eabi-gcc: false

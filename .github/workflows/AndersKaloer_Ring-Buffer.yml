@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'AndersKaloer/Ring-Buffer' }}
       ref: ${{ inputs.ref }}
-      build_script: 'AndersKaloer-Ring-Buffer.sh'
+      build_script: 'AndersKaloer_Ring-Buffer.sh'
       install_arm-none-eabi-gcc: false

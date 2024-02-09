@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'apache/mynewt-nimble' }}
       ref: ${{ inputs.ref }}
-      build_script: 'apache-mynewt-nimble.sh'
+      build_script: 'apache_mynewt-nimble.sh'
       install_arm-none-eabi-gcc: false

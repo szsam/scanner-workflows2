@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'CANopenNode/CANopenNode' }}
       ref: ${{ inputs.ref }}
-      build_script: 'CANopenNode-CANopenNode.sh'
+      build_script: 'CANopenNode_CANopenNode.sh'
       install_arm-none-eabi-gcc: false

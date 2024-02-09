@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jbruchon/elks' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jbruchon-elks.sh'
+      build_script: 'jbruchon_elks.sh'
       install_arm-none-eabi-gcc: false

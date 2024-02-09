@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'TencentCloud/tencentcloud-iot-sdk-embedded-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'TencentCloud-tencentcloud-iot-sdk-embedded-c.sh'
+      build_script: 'TencentCloud_tencentcloud-iot-sdk-embedded-c.sh'
       install_arm-none-eabi-gcc: false

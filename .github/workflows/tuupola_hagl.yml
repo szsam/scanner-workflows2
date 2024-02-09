@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'tuupola/hagl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'tuupola-hagl.sh'
+      build_script: 'tuupola_hagl.sh'
       install_arm-none-eabi-gcc: false

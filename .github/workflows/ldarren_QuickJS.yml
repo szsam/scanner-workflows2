@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ldarren/QuickJS' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ldarren-QuickJS.sh'
+      build_script: 'ldarren_QuickJS.sh'
       install_arm-none-eabi-gcc: false

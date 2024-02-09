@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'TUDSSL/BFree' }}
       ref: ${{ inputs.ref }}
-      build_script: 'TUDSSL-BFree.sh'
+      build_script: 'TUDSSL_BFree.sh'
       install_arm-none-eabi-gcc: false

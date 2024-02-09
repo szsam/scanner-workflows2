@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'tass-belgium/picotcp' }}
       ref: ${{ inputs.ref }}
-      build_script: 'tass-belgium-picotcp.sh'
+      build_script: 'tass-belgium_picotcp.sh'
       install_arm-none-eabi-gcc: false

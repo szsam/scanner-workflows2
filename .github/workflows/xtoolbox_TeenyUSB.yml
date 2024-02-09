@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'xtoolbox/TeenyUSB' }}
       ref: ${{ inputs.ref }}
-      build_script: 'xtoolbox-TeenyUSB.sh'
+      build_script: 'xtoolbox_TeenyUSB.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'vmware/splinterdb' }}
       ref: ${{ inputs.ref }}
-      build_script: 'vmware-splinterdb.sh'
+      build_script: 'vmware_splinterdb.sh'
       install_arm-none-eabi-gcc: false

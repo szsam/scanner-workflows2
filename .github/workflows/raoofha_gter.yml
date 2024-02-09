@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'raoofha/gter' }}
       ref: ${{ inputs.ref }}
-      build_script: 'raoofha-gter.sh'
+      build_script: 'raoofha_gter.sh'
       install_arm-none-eabi-gcc: false

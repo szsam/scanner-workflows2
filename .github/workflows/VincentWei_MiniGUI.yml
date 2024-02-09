@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'VincentWei/MiniGUI' }}
       ref: ${{ inputs.ref }}
-      build_script: 'VincentWei-MiniGUI.sh'
+      build_script: 'VincentWei_MiniGUI.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'lwip-tcpip/lwip' }}
       ref: ${{ inputs.ref }}
-      build_script: 'lwip-tcpip-lwip.sh'
+      build_script: 'lwip-tcpip_lwip.sh'
       install_arm-none-eabi-gcc: false

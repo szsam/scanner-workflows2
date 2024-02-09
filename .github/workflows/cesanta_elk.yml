@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cesanta/elk' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cesanta-elk.sh'
+      build_script: 'cesanta_elk.sh'
       install_arm-none-eabi-gcc: false

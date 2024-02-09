@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'atomvm/AtomVM' }}
       ref: ${{ inputs.ref }}
-      build_script: 'atomvm-AtomVM.sh'
+      build_script: 'atomvm_AtomVM.sh'
       install_arm-none-eabi-gcc: false

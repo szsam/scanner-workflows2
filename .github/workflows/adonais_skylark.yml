@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'adonais/skylark' }}
       ref: ${{ inputs.ref }}
-      build_script: 'adonais-skylark.sh'
+      build_script: 'adonais_skylark.sh'
       install_arm-none-eabi-gcc: false

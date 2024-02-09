@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'apache/mynewt-core' }}
       ref: ${{ inputs.ref }}
-      build_script: 'apache-mynewt-core.sh'
+      build_script: 'apache_mynewt-core.sh'
       install_arm-none-eabi-gcc: true

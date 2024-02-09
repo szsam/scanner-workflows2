@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'BohuTANG/nessDB' }}
       ref: ${{ inputs.ref }}
-      build_script: 'BohuTANG-nessDB.sh'
+      build_script: 'BohuTANG_nessDB.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'vtereshkov/umka-lang' }}
       ref: ${{ inputs.ref }}
-      build_script: 'vtereshkov-umka-lang.sh'
+      build_script: 'vtereshkov_umka-lang.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'RodrigoDornelles/3bc-lang' }}
       ref: ${{ inputs.ref }}
-      build_script: 'RodrigoDornelles-3bc-lang.sh'
+      build_script: 'RodrigoDornelles_3bc-lang.sh'
       install_arm-none-eabi-gcc: false

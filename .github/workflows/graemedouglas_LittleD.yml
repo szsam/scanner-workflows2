@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'graemedouglas/LittleD' }}
       ref: ${{ inputs.ref }}
-      build_script: 'graemedouglas-LittleD.sh'
+      build_script: 'graemedouglas_LittleD.sh'
       install_arm-none-eabi-gcc: false

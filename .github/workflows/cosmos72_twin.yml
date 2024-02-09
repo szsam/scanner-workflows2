@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cosmos72/twin' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cosmos72-twin.sh'
+      build_script: 'cosmos72_twin.sh'
       install_arm-none-eabi-gcc: false

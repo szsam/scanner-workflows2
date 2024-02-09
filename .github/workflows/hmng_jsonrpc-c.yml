@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'hmng/jsonrpc-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'hmng-jsonrpc-c.sh'
+      build_script: 'hmng_jsonrpc-c.sh'
       install_arm-none-eabi-gcc: false

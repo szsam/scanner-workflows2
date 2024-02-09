@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'DISTORTEC/distortos' }}
       ref: ${{ inputs.ref }}
-      build_script: 'DISTORTEC-distortos.sh'
+      build_script: 'DISTORTEC_distortos.sh'
       install_arm-none-eabi-gcc: true

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'never-lang/never' }}
       ref: ${{ inputs.ref }}
-      build_script: 'never-lang-never.sh'
+      build_script: 'never-lang_never.sh'
       install_arm-none-eabi-gcc: false

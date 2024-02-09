@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'beagleboard/librobotcontrol' }}
       ref: ${{ inputs.ref }}
-      build_script: 'beagleboard-librobotcontrol.sh'
+      build_script: 'beagleboard_librobotcontrol.sh'
       install_arm-none-eabi-gcc: false

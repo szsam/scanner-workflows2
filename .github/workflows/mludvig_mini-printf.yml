@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'mludvig/mini-printf' }}
       ref: ${{ inputs.ref }}
-      build_script: 'mludvig-mini-printf.sh'
+      build_script: 'mludvig_mini-printf.sh'
       install_arm-none-eabi-gcc: false

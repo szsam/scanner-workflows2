@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'wifidog/wifidog-gateway' }}
       ref: ${{ inputs.ref }}
-      build_script: 'wifidog-wifidog-gateway.sh'
+      build_script: 'wifidog_wifidog-gateway.sh'
       install_arm-none-eabi-gcc: false

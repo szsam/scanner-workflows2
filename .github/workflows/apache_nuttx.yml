@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'apache/nuttx' }}
       ref: ${{ inputs.ref }}
-      build_script: 'apache-nuttx.sh'
+      build_script: 'apache_nuttx.sh'
       install_arm-none-eabi-gcc: true

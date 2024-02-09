@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cjlano/tinyprintf' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cjlano-tinyprintf.sh'
+      build_script: 'cjlano_tinyprintf.sh'
       install_arm-none-eabi-gcc: false

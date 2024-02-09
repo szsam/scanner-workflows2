@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'DC-SWAT/DreamShell' }}
       ref: ${{ inputs.ref }}
-      build_script: 'DC-SWAT-DreamShell.sh'
+      build_script: 'DC-SWAT_DreamShell.sh'
       install_arm-none-eabi-gcc: false

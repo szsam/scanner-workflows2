@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'wolfSSL/wolfBoot' }}
       ref: ${{ inputs.ref }}
-      build_script: 'wolfSSL-wolfBoot.sh'
+      build_script: 'wolfSSL_wolfBoot.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ARMmbed/DAPLink' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ARMmbed-DAPLink.sh'
+      build_script: 'ARMmbed_DAPLink.sh'
       install_arm-none-eabi-gcc: true

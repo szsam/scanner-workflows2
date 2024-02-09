@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'Mbed-TLS/mbedtls' }}
       ref: ${{ inputs.ref }}
-      build_script: 'Mbed-TLS-mbedtls.sh'
+      build_script: 'Mbed-TLS_mbedtls.sh'
       install_arm-none-eabi-gcc: false

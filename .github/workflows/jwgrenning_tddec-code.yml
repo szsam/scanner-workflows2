@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jwgrenning/tddec-code' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jwgrenning-tddec-code.sh'
+      build_script: 'jwgrenning_tddec-code.sh'
       install_arm-none-eabi-gcc: false

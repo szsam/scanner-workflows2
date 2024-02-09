@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'lqian/light-LPR' }}
       ref: ${{ inputs.ref }}
-      build_script: 'lqian-light-LPR.sh'
+      build_script: 'lqian_light-LPR.sh'
       install_arm-none-eabi-gcc: false

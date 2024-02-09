@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'symisc/sod' }}
       ref: ${{ inputs.ref }}
-      build_script: 'symisc-sod.sh'
+      build_script: 'symisc_sod.sh'
       install_arm-none-eabi-gcc: false

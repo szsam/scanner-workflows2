@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ryankurte/micro-gui' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ryankurte-micro-gui.sh'
+      build_script: 'ryankurte_micro-gui.sh'
       install_arm-none-eabi-gcc: false

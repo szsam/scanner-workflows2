@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'insane-adding-machines/frosted' }}
       ref: ${{ inputs.ref }}
-      build_script: 'insane-adding-machines-frosted.sh'
+      build_script: 'insane-adding-machines_frosted.sh'
       install_arm-none-eabi-gcc: false

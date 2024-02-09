@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'bacnet-stack/bacnet-stack' }}
       ref: ${{ inputs.ref }}
-      build_script: 'bacnet-stack-bacnet-stack.sh'
+      build_script: 'bacnet-stack_bacnet-stack.sh'
       install_arm-none-eabi-gcc: false

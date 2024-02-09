@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'LiamBindle/MQTT-C' }}
       ref: ${{ inputs.ref }}
-      build_script: 'LiamBindle-MQTT-C.sh'
+      build_script: 'LiamBindle_MQTT-C.sh'
       install_arm-none-eabi-gcc: false

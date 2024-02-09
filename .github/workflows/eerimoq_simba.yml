@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'eerimoq/simba' }}
       ref: ${{ inputs.ref }}
-      build_script: 'eerimoq-simba.sh'
+      build_script: 'eerimoq_simba.sh'
       install_arm-none-eabi-gcc: false

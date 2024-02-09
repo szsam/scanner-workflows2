@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || '100/Cranium' }}
       ref: ${{ inputs.ref }}
-      build_script: '100-Cranium.sh'
+      build_script: '100_Cranium.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'aliyun/iotkit-embedded' }}
       ref: ${{ inputs.ref }}
-      build_script: 'aliyun-iotkit-embedded.sh'
+      build_script: 'aliyun_iotkit-embedded.sh'
       install_arm-none-eabi-gcc: false

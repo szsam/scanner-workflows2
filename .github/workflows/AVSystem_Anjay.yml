@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'AVSystem/Anjay' }}
       ref: ${{ inputs.ref }}
-      build_script: 'AVSystem-Anjay.sh'
+      build_script: 'AVSystem_Anjay.sh'
       install_arm-none-eabi-gcc: false

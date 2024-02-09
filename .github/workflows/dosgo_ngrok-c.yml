@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'dosgo/ngrok-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'dosgo-ngrok-c.sh'
+      build_script: 'dosgo_ngrok-c.sh'
       install_arm-none-eabi-gcc: false

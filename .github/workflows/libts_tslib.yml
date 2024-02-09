@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'libts/tslib' }}
       ref: ${{ inputs.ref }}
-      build_script: 'libts-tslib.sh'
+      build_script: 'libts_tslib.sh'
       install_arm-none-eabi-gcc: false

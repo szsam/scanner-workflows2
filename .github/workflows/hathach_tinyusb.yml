@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'hathach/tinyusb' }}
       ref: ${{ inputs.ref }}
-      build_script: 'hathach-tinyusb.sh'
+      build_script: 'hathach_tinyusb.sh'
       install_arm-none-eabi-gcc: true

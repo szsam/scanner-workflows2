@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jameswalmsley/bitthunder' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jameswalmsley-bitthunder.sh'
+      build_script: 'jameswalmsley_bitthunder.sh'
       install_arm-none-eabi-gcc: true

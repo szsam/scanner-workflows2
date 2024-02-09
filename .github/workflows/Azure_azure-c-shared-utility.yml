@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'Azure/azure-c-shared-utility' }}
       ref: ${{ inputs.ref }}
-      build_script: 'Azure-azure-c-shared-utility.sh'
+      build_script: 'Azure_azure-c-shared-utility.sh'
       install_arm-none-eabi-gcc: false

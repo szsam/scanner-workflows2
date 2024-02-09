@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'dcreager/libcork' }}
       ref: ${{ inputs.ref }}
-      build_script: 'dcreager-libcork.sh'
+      build_script: 'dcreager_libcork.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'someone42/hardware-bitcoin-wallet' }}
       ref: ${{ inputs.ref }}
-      build_script: 'someone42-hardware-bitcoin-wallet.sh'
+      build_script: 'someone42_hardware-bitcoin-wallet.sh'
       install_arm-none-eabi-gcc: false

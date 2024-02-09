@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'matrixssl/matrixssl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'matrixssl-matrixssl.sh'
+      build_script: 'matrixssl_matrixssl.sh'
       install_arm-none-eabi-gcc: false

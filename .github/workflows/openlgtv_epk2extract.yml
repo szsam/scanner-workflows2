@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'openlgtv/epk2extract' }}
       ref: ${{ inputs.ref }}
-      build_script: 'openlgtv-epk2extract.sh'
+      build_script: 'openlgtv_epk2extract.sh'
       install_arm-none-eabi-gcc: false

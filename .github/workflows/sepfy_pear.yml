@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'sepfy/pear' }}
       ref: ${{ inputs.ref }}
-      build_script: 'sepfy-pear.sh'
+      build_script: 'sepfy_pear.sh'
       install_arm-none-eabi-gcc: false

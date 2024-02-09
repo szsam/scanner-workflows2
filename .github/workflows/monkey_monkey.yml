@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'monkey/monkey' }}
       ref: ${{ inputs.ref }}
-      build_script: 'monkey-monkey.sh'
+      build_script: 'monkey_monkey.sh'
       install_arm-none-eabi-gcc: false

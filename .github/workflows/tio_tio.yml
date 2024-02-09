@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'tio/tio' }}
       ref: ${{ inputs.ref }}
-      build_script: 'tio-tio.sh'
+      build_script: 'tio_tio.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'Azure/azure-uamqp-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'Azure-azure-uamqp-c.sh'
+      build_script: 'Azure_azure-uamqp-c.sh'
       install_arm-none-eabi-gcc: false

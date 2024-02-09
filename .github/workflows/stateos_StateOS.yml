@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'stateos/StateOS' }}
       ref: ${{ inputs.ref }}
-      build_script: 'stateos-StateOS.sh'
+      build_script: 'stateos_StateOS.sh'
       install_arm-none-eabi-gcc: true

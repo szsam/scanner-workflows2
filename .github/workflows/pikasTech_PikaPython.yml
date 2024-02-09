@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'pikasTech/PikaPython' }}
       ref: ${{ inputs.ref }}
-      build_script: 'pikasTech-PikaPython.sh'
+      build_script: 'pikasTech_PikaPython.sh'
       install_arm-none-eabi-gcc: false

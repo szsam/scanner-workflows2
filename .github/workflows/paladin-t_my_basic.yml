@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'paladin-t/my_basic' }}
       ref: ${{ inputs.ref }}
-      build_script: 'paladin-t-my_basic.sh'
+      build_script: 'paladin-t_my_basic.sh'
       install_arm-none-eabi-gcc: false

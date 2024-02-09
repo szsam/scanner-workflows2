@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'WetDesertRock/Yarn' }}
       ref: ${{ inputs.ref }}
-      build_script: 'WetDesertRock-Yarn.sh'
+      build_script: 'WetDesertRock_Yarn.sh'
       install_arm-none-eabi-gcc: false

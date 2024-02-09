@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'mnunberg/jsonsl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'mnunberg-jsonsl.sh'
+      build_script: 'mnunberg_jsonsl.sh'
       install_arm-none-eabi-gcc: false

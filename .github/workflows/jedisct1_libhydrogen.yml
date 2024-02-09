@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jedisct1/libhydrogen' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jedisct1-libhydrogen.sh'
+      build_script: 'jedisct1_libhydrogen.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'gnea/grbl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'gnea-grbl.sh'
+      build_script: 'gnea_grbl.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'zhaojh329/libuhttpd' }}
       ref: ${{ inputs.ref }}
-      build_script: 'zhaojh329-libuhttpd.sh'
+      build_script: 'zhaojh329_libuhttpd.sh'
       install_arm-none-eabi-gcc: false

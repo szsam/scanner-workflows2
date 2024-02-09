@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'FrameworkComputer/EmbeddedController' }}
       ref: ${{ inputs.ref }}
-      build_script: 'FrameworkComputer-EmbeddedController.sh'
+      build_script: 'FrameworkComputer_EmbeddedController.sh'
       install_arm-none-eabi-gcc: false

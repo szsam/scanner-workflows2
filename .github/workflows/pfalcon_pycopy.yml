@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'pfalcon/pycopy' }}
       ref: ${{ inputs.ref }}
-      build_script: 'pfalcon-pycopy.sh'
+      build_script: 'pfalcon_pycopy.sh'
       install_arm-none-eabi-gcc: false

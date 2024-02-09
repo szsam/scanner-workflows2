@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'atomicobject/heatshrink' }}
       ref: ${{ inputs.ref }}
-      build_script: 'atomicobject-heatshrink.sh'
+      build_script: 'atomicobject_heatshrink.sh'
       install_arm-none-eabi-gcc: false

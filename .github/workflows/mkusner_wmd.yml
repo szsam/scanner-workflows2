@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'mkusner/wmd' }}
       ref: ${{ inputs.ref }}
-      build_script: 'mkusner-wmd.sh'
+      build_script: 'mkusner_wmd.sh'
       install_arm-none-eabi-gcc: false

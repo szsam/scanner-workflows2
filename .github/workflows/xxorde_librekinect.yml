@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'xxorde/librekinect' }}
       ref: ${{ inputs.ref }}
-      build_script: 'xxorde-librekinect.sh'
+      build_script: 'xxorde_librekinect.sh'
       install_arm-none-eabi-gcc: false

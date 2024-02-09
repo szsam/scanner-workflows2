@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'objectbox/objectbox-c' }}
       ref: ${{ inputs.ref }}
-      build_script: 'objectbox-objectbox-c.sh'
+      build_script: 'objectbox_objectbox-c.sh'
       install_arm-none-eabi-gcc: false

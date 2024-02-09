@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'adafruit/tinyuf2' }}
       ref: ${{ inputs.ref }}
-      build_script: 'adafruit-tinyuf2.sh'
+      build_script: 'adafruit_tinyuf2.sh'
       install_arm-none-eabi-gcc: false

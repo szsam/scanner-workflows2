@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'rafagafe/tiny-json' }}
       ref: ${{ inputs.ref }}
-      build_script: 'rafagafe-tiny-json.sh'
+      build_script: 'rafagafe_tiny-json.sh'
       install_arm-none-eabi-gcc: false

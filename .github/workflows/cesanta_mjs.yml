@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cesanta/mjs' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cesanta-mjs.sh'
+      build_script: 'cesanta_mjs.sh'
       install_arm-none-eabi-gcc: false

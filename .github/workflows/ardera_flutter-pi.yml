@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ardera/flutter-pi' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ardera-flutter-pi.sh'
+      build_script: 'ardera_flutter-pi.sh'
       install_arm-none-eabi-gcc: false

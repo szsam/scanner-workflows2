@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'embox/embox' }}
       ref: ${{ inputs.ref }}
-      build_script: 'embox-embox.sh'
+      build_script: 'embox_embox.sh'
       install_arm-none-eabi-gcc: false

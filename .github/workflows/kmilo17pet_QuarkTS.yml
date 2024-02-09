@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'kmilo17pet/QuarkTS' }}
       ref: ${{ inputs.ref }}
-      build_script: 'kmilo17pet-QuarkTS.sh'
+      build_script: 'kmilo17pet_QuarkTS.sh'
       install_arm-none-eabi-gcc: false

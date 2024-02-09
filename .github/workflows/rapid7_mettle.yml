@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'rapid7/mettle' }}
       ref: ${{ inputs.ref }}
-      build_script: 'rapid7-mettle.sh'
+      build_script: 'rapid7_mettle.sh'
       install_arm-none-eabi-gcc: false

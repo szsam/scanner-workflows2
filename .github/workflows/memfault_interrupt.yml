@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'memfault/interrupt' }}
       ref: ${{ inputs.ref }}
-      build_script: 'memfault-interrupt.sh'
+      build_script: 'memfault_interrupt.sh'
       install_arm-none-eabi-gcc: false

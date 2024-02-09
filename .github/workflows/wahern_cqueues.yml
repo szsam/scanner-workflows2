@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'wahern/cqueues' }}
       ref: ${{ inputs.ref }}
-      build_script: 'wahern-cqueues.sh'
+      build_script: 'wahern_cqueues.sh'
       install_arm-none-eabi-gcc: false

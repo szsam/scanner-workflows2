@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'C-Chads/tinygl' }}
       ref: ${{ inputs.ref }}
-      build_script: 'C-Chads-tinygl.sh'
+      build_script: 'C-Chads_tinygl.sh'
       install_arm-none-eabi-gcc: false

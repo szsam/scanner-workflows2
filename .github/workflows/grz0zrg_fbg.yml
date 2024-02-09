@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'grz0zrg/fbg' }}
       ref: ${{ inputs.ref }}
-      build_script: 'grz0zrg-fbg.sh'
+      build_script: 'grz0zrg_fbg.sh'
       install_arm-none-eabi-gcc: false

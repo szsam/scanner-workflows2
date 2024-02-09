@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'esl/erlang_ale' }}
       ref: ${{ inputs.ref }}
-      build_script: 'esl-erlang_ale.sh'
+      build_script: 'esl_erlang_ale.sh'
       install_arm-none-eabi-gcc: false

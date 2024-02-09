@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'achimdoebler/UGUI' }}
       ref: ${{ inputs.ref }}
-      build_script: 'achimdoebler-UGUI.sh'
+      build_script: 'achimdoebler_UGUI.sh'
       install_arm-none-eabi-gcc: false

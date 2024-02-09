@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'lvgl/lv_port_pc_eclipse' }}
       ref: ${{ inputs.ref }}
-      build_script: 'lvgl-lv_port_pc_eclipse.sh'
+      build_script: 'lvgl_lv_port_pc_eclipse.sh'
       install_arm-none-eabi-gcc: false

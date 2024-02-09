@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'liudf0716/xkcptun' }}
       ref: ${{ inputs.ref }}
-      build_script: 'liudf0716-xkcptun.sh'
+      build_script: 'liudf0716_xkcptun.sh'
       install_arm-none-eabi-gcc: false

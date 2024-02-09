@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'symisc/unqlite' }}
       ref: ${{ inputs.ref }}
-      build_script: 'symisc-unqlite.sh'
+      build_script: 'symisc_unqlite.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'kgoba/ft8_lib' }}
       ref: ${{ inputs.ref }}
-      build_script: 'kgoba-ft8_lib.sh'
+      build_script: 'kgoba_ft8_lib.sh'
       install_arm-none-eabi-gcc: false

@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'symisc/PH7' }}
       ref: ${{ inputs.ref }}
-      build_script: 'symisc-PH7.sh'
+      build_script: 'symisc_PH7.sh'
       install_arm-none-eabi-gcc: false

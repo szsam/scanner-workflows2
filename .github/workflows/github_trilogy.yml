@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'github/trilogy' }}
       ref: ${{ inputs.ref }}
-      build_script: 'github-trilogy.sh'
+      build_script: 'github_trilogy.sh'
       install_arm-none-eabi-gcc: false

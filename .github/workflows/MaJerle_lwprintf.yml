@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'MaJerle/lwprintf' }}
       ref: ${{ inputs.ref }}
-      build_script: 'MaJerle-lwprintf.sh'
+      build_script: 'MaJerle_lwprintf.sh'
       install_arm-none-eabi-gcc: false

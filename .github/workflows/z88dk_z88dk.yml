@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'z88dk/z88dk' }}
       ref: ${{ inputs.ref }}
-      build_script: 'z88dk-z88dk.sh'
+      build_script: 'z88dk_z88dk.sh'
       install_arm-none-eabi-gcc: false

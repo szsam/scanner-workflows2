@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'embeddedartistry/libc' }}
       ref: ${{ inputs.ref }}
-      build_script: 'embeddedartistry-libc.sh'
+      build_script: 'embeddedartistry_libc.sh'
       install_arm-none-eabi-gcc: false

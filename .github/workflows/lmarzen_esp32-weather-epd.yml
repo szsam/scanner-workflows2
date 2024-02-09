@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'lmarzen/esp32-weather-epd' }}
       ref: ${{ inputs.ref }}
-      build_script: 'lmarzen-esp32-weather-epd.sh'
+      build_script: 'lmarzen_esp32-weather-epd.sh'
       install_arm-none-eabi-gcc: false

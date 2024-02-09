@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'yumeng5/Spherical-Text-Embedding' }}
       ref: ${{ inputs.ref }}
-      build_script: 'yumeng5-Spherical-Text-Embedding.sh'
+      build_script: 'yumeng5_Spherical-Text-Embedding.sh'
       install_arm-none-eabi-gcc: false

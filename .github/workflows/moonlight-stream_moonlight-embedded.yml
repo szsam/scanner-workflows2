@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'moonlight-stream/moonlight-embedded' }}
       ref: ${{ inputs.ref }}
-      build_script: 'moonlight-stream-moonlight-embedded.sh'
+      build_script: 'moonlight-stream_moonlight-embedded.sh'
       install_arm-none-eabi-gcc: false

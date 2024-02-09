@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cesanta/mongoose' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cesanta-mongoose.sh'
+      build_script: 'cesanta_mongoose.sh'
       install_arm-none-eabi-gcc: false

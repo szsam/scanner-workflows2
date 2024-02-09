@@ -20,6 +20,6 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'bytecodealliance/wasm-micro-runtime' }}
       ref: ${{ inputs.ref }}
-      install_script: 'bytecodealliance-wasm-micro-runtime.sh'
-      build_script: 'bytecodealliance-wasm-micro-runtime.sh'
+      install_script: 'bytecodealliance_wasm-micro-runtime.sh'
+      build_script: 'bytecodealliance_wasm-micro-runtime.sh'
       install_arm-none-eabi-gcc: false

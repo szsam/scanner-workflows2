@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cleanflight/cleanflight' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cleanflight-cleanflight.sh'
+      build_script: 'cleanflight_cleanflight.sh'
       install_arm-none-eabi-gcc: false

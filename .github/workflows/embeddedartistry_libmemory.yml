@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'embeddedartistry/libmemory' }}
       ref: ${{ inputs.ref }}
-      build_script: 'embeddedartistry-libmemory.sh'
+      build_script: 'embeddedartistry_libmemory.sh'
       install_arm-none-eabi-gcc: false

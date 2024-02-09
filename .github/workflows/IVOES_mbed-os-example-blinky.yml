@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'IVOES/mbed-os-example-blinky' }}
       ref: ${{ inputs.ref }}
-      build_script: 'IVOES-mbed-os-example-blinky.sh'
+      build_script: 'IVOES_mbed-os-example-blinky.sh'
       install_arm-none-eabi-gcc: true

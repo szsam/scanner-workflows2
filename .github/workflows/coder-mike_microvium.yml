@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'coder-mike/microvium' }}
       ref: ${{ inputs.ref }}
-      build_script: 'coder-mike-microvium.sh'
+      build_script: 'coder-mike_microvium.sh'
       install_arm-none-eabi-gcc: false

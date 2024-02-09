@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'ccxvii/mujs' }}
       ref: ${{ inputs.ref }}
-      build_script: 'ccxvii-mujs.sh'
+      build_script: 'ccxvii_mujs.sh'
       install_arm-none-eabi-gcc: false

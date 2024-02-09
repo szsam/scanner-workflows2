@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'RIOT-OS/RIOT' }}
       ref: ${{ inputs.ref }}
-      build_script: 'RIOT-OS-RIOT.sh'
+      build_script: 'RIOT-OS_RIOT.sh'
       install_arm-none-eabi-gcc: false

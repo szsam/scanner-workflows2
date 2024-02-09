@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'berry-lang/berry' }}
       ref: ${{ inputs.ref }}
-      build_script: 'berry-lang-berry.sh'
+      build_script: 'berry-lang_berry.sh'
       install_arm-none-eabi-gcc: false

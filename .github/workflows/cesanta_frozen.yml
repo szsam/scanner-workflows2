@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'cesanta/frozen' }}
       ref: ${{ inputs.ref }}
-      build_script: 'cesanta-frozen.sh'
+      build_script: 'cesanta_frozen.sh'
       install_arm-none-eabi-gcc: false

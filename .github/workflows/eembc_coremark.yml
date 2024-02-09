@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'eembc/coremark' }}
       ref: ${{ inputs.ref }}
-      build_script: 'eembc-coremark.sh'
+      build_script: 'eembc_coremark.sh'
       install_arm-none-eabi-gcc: false

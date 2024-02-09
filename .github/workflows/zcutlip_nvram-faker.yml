@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'zcutlip/nvram-faker' }}
       ref: ${{ inputs.ref }}
-      build_script: 'zcutlip-nvram-faker.sh'
+      build_script: 'zcutlip_nvram-faker.sh'
       install_arm-none-eabi-gcc: false

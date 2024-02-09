@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'pocoproject/poco' }}
       ref: ${{ inputs.ref }}
-      build_script: 'pocoproject-poco.sh'
+      build_script: 'pocoproject_poco.sh'
       install_arm-none-eabi-gcc: false

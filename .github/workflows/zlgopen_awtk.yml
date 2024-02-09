@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'zlgopen/awtk' }}
       ref: ${{ inputs.ref }}
-      build_script: 'zlgopen-awtk.sh'
+      build_script: 'zlgopen_awtk.sh'
       install_arm-none-eabi-gcc: false

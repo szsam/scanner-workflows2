@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'jnz/q3vm' }}
       ref: ${{ inputs.ref }}
-      build_script: 'jnz-q3vm.sh'
+      build_script: 'jnz_q3vm.sh'
       install_arm-none-eabi-gcc: false

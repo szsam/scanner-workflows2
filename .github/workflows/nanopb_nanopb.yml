@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'nanopb/nanopb' }}
       ref: ${{ inputs.ref }}
-      build_script: 'nanopb-nanopb.sh'
+      build_script: 'nanopb_nanopb.sh'
       install_arm-none-eabi-gcc: false

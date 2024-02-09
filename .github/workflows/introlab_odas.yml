@@ -20,5 +20,5 @@ jobs:
     with:
       repository: ${{ inputs.repository || 'introlab/odas' }}
       ref: ${{ inputs.ref }}
-      build_script: 'introlab-odas.sh'
+      build_script: 'introlab_odas.sh'
       install_arm-none-eabi-gcc: false
