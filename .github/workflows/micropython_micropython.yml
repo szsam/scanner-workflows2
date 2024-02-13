@@ -26,3 +26,4 @@ jobs:
       ref: ${{ inputs.ref }}
       build_script: 'micropython_micropython.sh'
       install_arm-none-eabi-gcc: true
+      sarif_filter_patterns: '-lib/**'
