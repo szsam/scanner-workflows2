@@ -165,6 +165,7 @@ jobs:
           -**/3rd/**
           -**/external/**
           -**/cmake*/Modules/**
+          -**/CMakeFiles/**
           ${{ env.IGNORE_SM }}
           ${{ inputs.sarif_filter_patterns }}
         input: result/cpp.sarif
