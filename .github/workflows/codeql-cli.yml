@@ -164,6 +164,7 @@ jobs:
           -**/third_party/**
           -**/3rd/**
           -**/external/**
+          -**/deps/**
           -**/cmake*/Modules/**
           -**/CMakeFiles/**
           ${{ env.IGNORE_SM }}
