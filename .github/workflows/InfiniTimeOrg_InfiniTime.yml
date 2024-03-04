@@ -23,3 +23,6 @@ jobs:
       build_script: 'InfiniTimeOrg_InfiniTime.sh'
       install_arm-none-eabi-gcc: true
       install_node: true
+      sarif_filter_patterns: |
+        -src/libs/**
+        -nRF5_SDK*/**
