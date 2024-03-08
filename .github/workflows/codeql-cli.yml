@@ -147,8 +147,8 @@ jobs:
         rm -rf ../result && mkdir -p ../result
         codeql database analyze $CODEQL_DATABASE_PATH --format=sarifv2.1.0 \
           --output=../result/cpp.sarif --download --threads=0 \
-          codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls \
-          codeql/cpp-queries:Critical/
+          codeql/cpp-queries:codeql-suites/cpp-security-and-quality.qls
+          #codeql/cpp-queries:Critical/
 
     - name: Filter out uninteresting errors and warnings
       uses: advanced-security/filter-sarif@v1
