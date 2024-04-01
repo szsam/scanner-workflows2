@@ -22,3 +22,4 @@ jobs:
       ref: ${{ inputs.ref }}
       build_script: 'IVOES_zephyrproject.sh'
       install_arm-none-eabi-gcc: false
+      sarif_filter_patterns: '-modules/**'
