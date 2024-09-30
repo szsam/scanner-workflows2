@@ -22,6 +22,11 @@ on:
         required: false
         type: boolean
         default: false
+      push_results_to_another_repo:
+        description: 'Push results to another repo'
+        required: false
+        type: boolean
+        default: false
 
   workflow_call:
     inputs:
@@ -59,6 +64,11 @@ on:
         description: 'Additional patterns for advanced-security/filter-sarif'
         required: false
         type: string
+      push_results_to_another_repo:
+        description: 'Push results to another repo'
+        required: false
+        type: boolean
+        default: true
 
 
 jobs:
@@ -182,6 +192,7 @@ jobs:
         retention-days: 5
 
     - name: Push codeql results to purs3lab/OSSEmbeddedResults
+      if: inputs.push_results_to_another_repo
       uses: cpina/github-action-push-to-another-repository@main
       env:
         SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
