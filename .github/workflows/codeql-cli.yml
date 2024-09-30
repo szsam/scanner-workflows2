@@ -90,9 +90,6 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Print inputs
-      run: echo "${{ toJSON(github.event.inputs) }}"
-
     - name: Checkout scanner repository
       uses: actions/checkout@v4
       with:
@@ -120,6 +117,11 @@ jobs:
           echo "$(git submodule foreach --quiet 'echo -$sm_path/**')"
           echo 'EOF'
         } >> $GITHUB_ENV
+
+    - name: Print inputs and env variables
+      run: |
+        echo "${{ toJSON(github.event.inputs) }}"
+        echo "${{ toJSON(env) }}"
 
     - name: arm-none-eabi-gcc GNU Arm Embedded Toolchain
       uses: carlosperate/arm-none-eabi-gcc-action@v1
