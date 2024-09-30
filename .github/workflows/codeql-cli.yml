@@ -90,6 +90,9 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
+    - name: Print inputs
+      run: echo "${{ toJSON(github.event.inputs) }}"
+
     - name: Checkout scanner repository
       uses: actions/checkout@v4
       with:
