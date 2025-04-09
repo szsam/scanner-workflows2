@@ -198,4 +198,4 @@ jobs:
 
     - name: Push codeql results to purs3lab/OSSEmbeddedResults
       if: inputs.push_results_to_another_repo
-      run: yes
+      run: /bin/true
