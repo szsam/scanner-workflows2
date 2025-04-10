@@ -22,11 +22,6 @@ on:
         required: false
         type: boolean
         default: false
-      push_results_to_another_repo:
-        description: 'Push results to another repo'
-        required: false
-        type: boolean
-        default: false
 
   workflow_call:
     inputs:
@@ -64,11 +59,6 @@ on:
         description: 'Additional patterns for advanced-security/filter-sarif'
         required: false
         type: string
-      push_results_to_another_repo:
-        description: 'Push results to another repo'
-        required: false
-        type: boolean
-        default: true
 
 
 jobs:
@@ -195,20 +185,3 @@ jobs:
         name: codeql-results
         path: result
         retention-days: 5
-
-    - name: Push codeql results to purs3lab/OSSEmbeddedResults
-      if: inputs.push_results_to_another_repo
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-      with:
-        source-directory: result
-        destination-github-username: 'purs3lab'
-        destination-repository-name: 'OSSEmbeddedResults'
-        user-email: shen497@purdue.edu
-        target-branch: main
-        target-directory: ${{ inputs.repository }}/${{ env.RUT_SHA }}
-        commit-message: >
-          Upload CodeQL result of
-          ${{ github.server_url }}/${{ inputs.repository }}/commit/${{ env.RUT_SHA }}
-          by ORIGIN_COMMIT
